@@ -1,0 +1,181 @@
+@font-face {
+    font-family: title;
+    src: url(/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: simple;
+    src: url(/fonts/Roboto-Regular.ttf);
+}
+
+* {
+    font-family: simple;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: title;
+    margin-bottom: 20px;
+    font-size: 3.2rem;
+}
+
+.alert-place {
+    width: 90vw;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.main-container{
+    display: flex;
+    padding: 20px;
+    box-shadow: 5px 5px 15px #00000070;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+
+.left-container{
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding : 70px;
+}   
+
+ul{
+    margin-top: 40px;
+    list-style-type: none;
+    padding: 0px;
+    line-height: 2rem;
+}
+
+li{
+    display: flex;
+    align-items: center;
+}
+
+
+ul svg {
+    margin-right: 10px;
+}
+
+
+.email-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 20px 0px;
+}
+
+.email-part > label {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+#Email{
+    width: 100%;
+    padding: 15px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.387);
+}
+
+#Email:focus{
+    outline: none;
+    border-color: orange;
+}
+
+#subscribe{
+    padding: 15px;
+    background-color: #272043;
+}
+
+@keyframes buttonHovered {
+    0%{
+        box-shadow : 0px 20px 30px hsla(4, 100%, 67%, 0.01);
+        background-color: #272043;
+    }
+    100%{
+        box-shadow : 0px 20px 30px hsla(4, 100%, 67%, 0.350);
+        background-color: #ff5757;
+    }
+    
+}
+
+
+
+#subscribe:hover{
+    animation: buttonHovered 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#subscribe:active{
+    opacity: 90%;
+}
+
+
+@media (max-width : 1035px) {
+    .main-container{
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 10px;
+        overflow: hidden;
+    }
+
+    .right-container svg{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width : 510px) {
+
+    html{
+        font-size: 10pt;
+    }
+    
+    .left-container{
+        text-align: center;
+        padding: 70px 50px 70px 50px;
+    }
+    ul{
+        display: flex;
+    }
+
+    ul li{
+        flex-basis: 33%;
+    }
+
+    li{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        line-height: normal;
+        text-justify: auto;
+    }
+
+    li svg{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    #middle-li{
+        border-left: dotted;
+        border-right: dotted;
+        border-color: rgba(139, 86, 0, 0.309);
+    }
+
+    .email-part{
+        margin-top: 25px;
+    }
+    
+}

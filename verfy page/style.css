@@ -1,0 +1,103 @@
+@font-face {
+    font-family: title;
+    src: url(/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: simple;
+    src: url(/fonts/Roboto-Regular.ttf);
+}
+
+* {
+    font-family: simple;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: title;
+    margin-bottom: 20px;
+    font-size: 3.2rem;
+    margin-top: 15px;
+}
+
+
+
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+.card{
+    width: 510px;
+    height: 510px;
+    padding: 70px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px #00000070;
+    box-sizing: border-box;
+}
+
+
+#email{
+    color: #e16e6e;
+    font-style:oblique;
+    font-weight: 800;
+}
+
+
+.btn{
+    padding: 15px;
+    background-color: #272043;
+}
+
+@keyframes buttonHovered {
+    0%{
+        box-shadow : 0px 20px 30px hsla(4, 100%, 67%, 0.01);
+        background-color: #272043;
+    }
+    100%{
+        box-shadow : 0px 20px 30px hsla(4, 100%, 67%, 0.350);
+        background-color: #ff5757;
+    }
+    
+}
+
+
+.btn:hover{
+    animation: buttonHovered 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.btn:active{
+    opacity: 90%;
+}
+
+
+
+
+@media (max-width : 520px) {
+    html{
+        font-size: 10pt;
+    }
+    .card{
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1{
+        margin-top: 50px;
+    }
+
+    .btn{
+        margin-top: 200px;
+    }
+
+}

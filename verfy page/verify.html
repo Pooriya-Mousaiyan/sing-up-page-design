@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verify</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/verfy page/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>
+            <h1>Thanks for subscribing!</h1>
+            <p>A confirmation email has been sent to <span id="email">emailplace12345678920xtyrewe@gmail.com</span>. 
+                Please open it and click the button inside to confirm your subscription.</p>
+            <button class="btn btn-primary dissmiss">  Dismiss message</button>
+        </div>
+    </div>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        const email = document.getElementById("email");
+        email.innerHTML = localStorage.getItem("email");
+        localStorage.clear();
+        document.querySelector('button').addEventListener('click', function() {
+            location.href = "../index.html";
+        })
+    </script>
+</body>
+</html>
